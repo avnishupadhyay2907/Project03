@@ -51,7 +51,7 @@ public class UserListCtl extends BaseCtl {
 		dto.setFirstName(DataUtility.getString(request.getParameter("firstName")));
 
 		dto.setLastName(DataUtility.getString(request.getParameter("lastName")));
-
+dto.setDob(DataUtility.getDate(request.getParameter("dob")));
 		dto.setLogin(DataUtility.getString(request.getParameter("login")));
 		dto.setRoleId(DataUtility.getLong(request.getParameter("Role")));
 		populateBean(dto, request);
@@ -160,7 +160,9 @@ public class UserListCtl extends BaseCtl {
 						ServletUtility.setSuccessMessage("Data Successfully Deleted!", request);
 					}
 				} else {
+					
 					ServletUtility.setErrorMessage("Select atleast one record", request);
+					
 				}
 			}
 			if (OP_BACK.equalsIgnoreCase(op)) {

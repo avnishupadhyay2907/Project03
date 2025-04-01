@@ -21,13 +21,12 @@
 <style>
 .hm {
 	background-image: url('<%=ORSView.APP_CONTEXT%>/img/list2.jpg');
-	
 	background-repeat: no-repeat;
-	background-attachment: fixed; 
+	background-attachment: fixed;
 	background-size: cover;
 	padding-top: 85px;
-	
-    /*  background-size: 100%; */
+
+	/*  background-size: 100%; */
 }
 
 .p1 {
@@ -42,6 +41,7 @@
 </style>
 </head>
 <%@include file="Header.jsp"%>
+<%@include file="calendar.jsp"%>
 <body class="hm">
 	<div>
 		<form class="pb-5" action="<%=ORSView.USER_LIST_CTL%>" method="post">
@@ -108,11 +108,19 @@
 
 			<div class="row">
 
-				<div class="col-sm-2"></div>
+			
 				<div class="col-sm-2">
 					<input type="text" name="firstName" placeholder="Enter FirstName"
 						class="form-control"
 						value="<%=ServletUtility.getParameter("firstName", request)%>">
+				</div>
+				
+
+			
+				<div class="col-sm-2">
+					<input type="text" id="datepicker2" name="dob" placeholder="Enter DOB"
+						class="form-control"
+						value="<%=ServletUtility.getParameter("dob", request)%>">
 				</div>
 				&emsp;
 				<div class="col-sm-2">
@@ -130,6 +138,8 @@
 						type="submit" class="btn btn-dark btn-md" style="font-size: 15px"
 						name="operation" value="<%=UserListCtl.OP_RESET%>">
 				</div>
+				
+				
 				<div class="col-sm-1"></div>
 			</div>
 
