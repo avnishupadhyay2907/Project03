@@ -49,6 +49,9 @@ public interface ORSView {
 	public String STOCK_PURCHASE_VIEW = PAGE_FOLDER + "/StockPurchaseView.jsp";
 	public String STOCK_PURCHASE_LIST_VIEW = PAGE_FOLDER + "/StockPurchaseListView.jsp";
 
+	public String EMPLOYEE_VIEW = PAGE_FOLDER + "/EmployeeView.jsp";
+	public String EMPLOYEE_LIST_VIEW = PAGE_FOLDER + "/EmployeeListView.jsp";
+	
 	public String ERROR_CTL = APP_CONTEXT + "/ErrorCtl";
 
 	public String MARKSHEET_CTL = APP_CONTEXT + "/ctl/MarksheetCtl";
@@ -84,5 +87,8 @@ public interface ORSView {
 
 	public String STOCK_PURCHASE_CTL = APP_CONTEXT + "/ctl/StockPurchaseCtl";
 	public String STOCK_PURCHASE_LIST_CTL = APP_CONTEXT + "/ctl/StockPurchaseListCtl";
+	
+	public String EMPLOYEE_CTL = APP_CONTEXT + "/ctl/EmployeeCtl";
+	public String EMPLOYEE_LIST_CTL = APP_CONTEXT + "/ctl/EmployeeListCtl";
 
 }

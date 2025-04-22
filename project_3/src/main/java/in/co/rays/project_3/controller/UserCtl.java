@@ -204,7 +204,7 @@ public class UserCtl extends BaseCtl {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		String op = DataUtility.getString(request.getParameter("operation"));
-		System.out.println("-------------------------------------------------------------------------dopost run-------");
+		System.out.println("----dopost run----");
 		// get model
 		UserModelInt model = ModelFactory.getInstance().getUserModel();
 		long id = DataUtility.getLong(request.getParameter("id"));

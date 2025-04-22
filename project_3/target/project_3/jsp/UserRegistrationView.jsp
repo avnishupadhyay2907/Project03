@@ -73,7 +73,7 @@ i.css {
 						<div class="card-body">
 
 							<h3 class="text-center default-text text-success pb-2">User
-								Registration 1</h3>
+								Registration</h3>
 							<!--Body-->
 							<div>
 

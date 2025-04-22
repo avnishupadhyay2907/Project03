@@ -95,8 +95,8 @@ public class UserModelHibImp implements UserModelInt {
 		UserDTO existDto = findByLogin(dto.getLogin());
 		// Check if updated LoginId already exist
 		if (existDto != null && existDto.getId() != dto.getId()) {
-		
-			System.out.println("in duppppppppp");
+
+			System.out.println("in duplicate reocord  condition model update");
 			throw new DuplicateRecordException("LoginId is already exist");
 		}
 

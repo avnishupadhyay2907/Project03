@@ -207,7 +207,7 @@ i.css {
 
 	</div>
 
-</body>
+
 <%@include file="FooterView.jsp"%>
 
 </body>
