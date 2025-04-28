@@ -25,7 +25,7 @@ import in.co.rays.project_3.util.ServletUtility;
 @WebServlet(name = "EmployeeCtl", urlPatterns = { "/ctl/EmployeeCtl" })
 public class EmployeeCtl extends BaseCtl {
 
-	private static Logger log = Logger.getLogger(StockPurchaseCtl.class);
+	private static Logger log = Logger.getLogger(EmployeeCtl.class);
 
 	protected boolean validate(HttpServletRequest request) {
 		boolean pass = true;

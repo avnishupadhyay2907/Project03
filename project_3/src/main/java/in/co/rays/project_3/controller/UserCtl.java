@@ -109,11 +109,11 @@ public class UserCtl extends BaseCtl {
 			pass = false;
 		}
 
-		if (DataValidator.isNull(request.getParameter("emailId"))) {
-			request.setAttribute("emailId", PropertyReader.getValue("error.require", "email Id"));
+		if (DataValidator.isNull(request.getParameter("login"))) {
+			request.setAttribute("login", PropertyReader.getValue("error.require", "Login"));
 			pass = false;
-		} else if (!DataValidator.isEmail(request.getParameter("emailId"))) {
-			request.setAttribute("emailId", PropertyReader.getValue("error.email", "Email Id "));
+		} else if (!DataValidator.isEmail(request.getParameter("login"))) {
+			request.setAttribute("login", PropertyReader.getValue("error.email", "Login"));
 			pass = false;
 		}
 		if (DataValidator.isNull(request.getParameter("dob"))) {
@@ -161,7 +161,7 @@ public class UserCtl extends BaseCtl {
 
 		dto.setLastName(DataUtility.getString(request.getParameter("lastName")));
 
-		dto.setLogin(DataUtility.getString(request.getParameter("emailId")));
+		dto.setLogin(DataUtility.getString(request.getParameter("login")));
 
 		dto.setPassword(DataUtility.getString(request.getParameter("password")));
 

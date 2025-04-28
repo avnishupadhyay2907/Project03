@@ -94,7 +94,7 @@ public class UserModelHibImp implements UserModelInt {
 		Transaction tx = null;
 		UserDTO existDto = findByLogin(dto.getLogin());
 		// Check if updated LoginId already exist
-		if (existDto != null && existDto.getId() != dto.getId()) {
+		if (existDto != null && !(existDto.getId() == dto.getId())) {
 
 			System.out.println("in duplicate reocord  condition model update");
 			throw new DuplicateRecordException("LoginId is already exist");
@@ -139,7 +139,7 @@ public class UserModelHibImp implements UserModelInt {
 		try {
 			session = HibDataSource.getSession();
 			Criteria criteria = session.createCriteria(UserDTO.class);
-			criteria.add(Restrictions.eq("login", login));
+			criteria.add(Restrictions.eq("login",login));
 			List list = criteria.list();
 			if (list.size() == 1) {
 				dto = (UserDTO) list.get(0);

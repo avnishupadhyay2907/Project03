@@ -200,10 +200,10 @@ i.css {
         <div class="input-group-prepend">
           <div class="input-group-text"><i class="fa fa-envelope grey-text" style="font-size: 1rem;"></i> </div>
         </div>
-        <input type="text" class="form-control" id="defaultForm-email" name="emailId" placeholder="email Id"   value="<%=DataUtility.getStringData(dto.getLogin())%>">
+        <input type="text" class="form-control" id="defaultForm-email" name="login" placeholder="email Id"   value="<%=DataUtility.getString(dto.getLogin())%>">
       </div>
     </div>
-	<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("emailId", request)%></font></br>
+	<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("login", request)%></font></br>
 							
 							<%-- <%} %> --%>
 							
