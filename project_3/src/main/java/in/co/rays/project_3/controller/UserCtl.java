@@ -161,7 +161,7 @@ public class UserCtl extends BaseCtl {
 
 		dto.setLastName(DataUtility.getString(request.getParameter("lastName")));
 
-		dto.setLogin(DataUtility.getString(request.getParameter("login")));
+		dto.setLogin(DataUtility.getStringData(request.getParameter("login")));
 
 		dto.setPassword(DataUtility.getString(request.getParameter("password")));
 
