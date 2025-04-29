@@ -142,6 +142,12 @@ public class StockPurchaseModelHibImp implements StockPurchaseModelInt {
 				if (dto.getPurchasePrice() != null && dto.getPurchasePrice().length() > 0) {
 					criteria.add(Restrictions.like("purchasePrice", dto.getPurchasePrice() + "%"));
 				}
+				if (dto.getOrderType() != null && dto.getOrderType().length() > 0) {
+					criteria.add(Restrictions.like("orderType", dto.getOrderType() + "%"));
+				}
+				if (dto.getPurchaseDate() != null && dto.getPurchaseDate().getTime() > 0) {
+					criteria.add(Restrictions.eq("purchaseDate", dto.getPurchaseDate() ));
+				}
 				
 			}
 			/*

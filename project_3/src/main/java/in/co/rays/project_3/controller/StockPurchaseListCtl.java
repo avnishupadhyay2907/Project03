@@ -41,6 +41,9 @@ public class StockPurchaseListCtl extends BaseCtl {
 
 		dto.setQuantity(DataUtility.getString(request.getParameter("quantity")));
 
+		dto.setOrderType(DataUtility.getString(request.getParameter("orderType")));
+		
+		dto.setPurchaseDate(DataUtility.getDate(request.getParameter("purchaseDate")));
 		System.out.println("dto===>" + request.getParameter("purchasePrice"));
 		dto.setPurchasePrice(DataUtility.getString(request.getParameter("purchasePrice")));
 

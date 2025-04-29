@@ -43,15 +43,10 @@ public interface ORSView {
 	public String TIMETABLE_LIST_VIEW = PAGE_FOLDER + "/TimeTableListView.jsp";
 	public String SUBJECT_VIEW = PAGE_FOLDER + "/SubjectView.jsp";
 	public String SUBJECT_LIST_VIEW = PAGE_FOLDER + "/SubjectListView.jsp";
-	public String PRODUCT_VIEW = PAGE_FOLDER + "/ProductView.jsp";
-	public String PRODUCT_LIST_VIEW = PAGE_FOLDER + "/ProductListView.jsp";
 
 	public String STOCK_PURCHASE_VIEW = PAGE_FOLDER + "/StockPurchaseView.jsp";
 	public String STOCK_PURCHASE_LIST_VIEW = PAGE_FOLDER + "/StockPurchaseListView.jsp";
 
-	public String EMPLOYEE_VIEW = PAGE_FOLDER + "/EmployeeView.jsp";
-	public String EMPLOYEE_LIST_VIEW = PAGE_FOLDER + "/EmployeeListView.jsp";
-	
 	public String ERROR_CTL = APP_CONTEXT + "/ErrorCtl";
 
 	public String MARKSHEET_CTL = APP_CONTEXT + "/ctl/MarksheetCtl";
@@ -76,8 +71,6 @@ public interface ORSView {
 	public String SUBJECT_LIST_CTL = APP_CONTEXT + "/ctl/SubjectListCtl";
 	public String TIMETABLE_CTL = APP_CONTEXT + "/ctl/TimeTableCtl";
 	public String TIMETABLE_LIST_CTL = APP_CONTEXT + "/ctl/TimeTableListCtl";
-	public String PRODUCT_CTL = APP_CONTEXT + "/ctl/ProductCtl";
-	public String PRODUCT_LIST_CTL = APP_CONTEXT + "/ctl/ProductListCtl";
 
 	public String GET_MARKSHEET_CTL = APP_CONTEXT + "/ctl/GetMarksheetCtl";
 	public String CHANGE_PASSWORD_CTL = APP_CONTEXT + "/ctl/ChangePasswordCtl";
@@ -87,8 +80,5 @@ public interface ORSView {
 
 	public String STOCK_PURCHASE_CTL = APP_CONTEXT + "/ctl/StockPurchaseCtl";
 	public String STOCK_PURCHASE_LIST_CTL = APP_CONTEXT + "/ctl/StockPurchaseListCtl";
-	
-	public String EMPLOYEE_CTL = APP_CONTEXT + "/ctl/EmployeeCtl";
-	public String EMPLOYEE_LIST_CTL = APP_CONTEXT + "/ctl/EmployeeListCtl";
 
 }

@@ -1,3 +1,5 @@
+<%@page import="in.co.rays.project_3.util.HTMLUtility"%>
+<%@page import="java.util.HashMap"%>
 <%@page import="in.co.rays.project_3.controller.StockPurchaseCtl"%>
 <%@page import="in.co.rays.project_3.util.ServletUtility"%>
 <%@page import="in.co.rays.project_3.util.DataUtility"%>
@@ -144,28 +146,31 @@ i.css {
         <div class="input-group-prepend">
           <div class="input-group-text"><i class="fa fa-calendar grey-text" style="font-size: 1rem;"></i> </div>
         </div>
-        <input type="text" id="datepicker2" name="purchaseDate" class="form-control" placeholder=" Enter Purchase Date" readonly="readonly" value="<%=DataUtility.getDateString(dto.getPurchaseDate()) %>">
+        <input type="text" id="datepicker" name="purchaseDate" class="form-control" placeholder=" Enter Purchase Date" readonly="readonly" value="<%=DataUtility.getDateString(dto.getPurchaseDate()) %>">
       </div>
     </div>	
 	<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("purchaseDate", request)%></font></br>
 
-								<span class="pl-sm-5"><b>Order Type</b><span
-									style="color: red;">*</span></span> </br>
-								<div class="col-sm-12">
-									<div class="input-group">
-										<div class="input-group-prepend">
-											<div class="input-group-text">
-												<i class="fa fa-address-card grey-text"
-													style="font-size: 1rem;"></i>
-											</div>
-										</div>
-										<input type="text" name="orderType" class="form-control"
-											placeholder="Enter Order Type"
-											value="<%=DataUtility.getStringData(dto.getOrderType())%>">
-									</div>
-								</div>
-								<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("orderType", request)%></font><br>
-
+								<span class="pl-sm-5"><b>Order Type</b><span style="color: red;">*</span></span> </br>
+							 
+	<div class="col-sm-12">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text"><i class="fa fa-venus-mars grey-text" style="font-size: 1rem;"></i> </div>
+        </div>
+        
+									<%
+										HashMap map = new HashMap();
+										map.put("High", "High");
+										map.put("Medium", "Medium");
+										map.put("Low", "Low");
+										String htmlList = HTMLUtility.getList("orderType", dto.getOrderType(), map);
+									%>
+									<%=htmlList%></div>
+      
+    </div>		
+	<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("orderType", request)%></font></br>
+							
 
 								
 							</div>

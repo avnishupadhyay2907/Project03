@@ -27,19 +27,7 @@ public final class ModelFactory {
 		return mFactory;
 	}
 
-	public EmployeeModelInt getEmployeeModel() {
-		EmployeeModelInt employeeModel = (EmployeeModelInt) modelCache.get("employeeModel");
-		if (employeeModel == null) {
-			if ("Hibernate".equals(DATABASE)) {
-				employeeModel = new EmployeeModelHibImp();
-			}
-			if ("JDBC".equals(DATABASE)) {
-				employeeModel = new EmployeeModelHibImp();
-			}
-			modelCache.put("employeeModel", employeeModel);
-		}
-		return employeeModel;
-	}
+	
 	
 	public StockPurchaseModelInt getStockPurchaseModel() {
 		StockPurchaseModelInt stockModel = (StockPurchaseModelInt) modelCache.get("stockModel");
@@ -55,19 +43,7 @@ public final class ModelFactory {
 		return stockModel;
 	}
 
-	public ProductModelInt getProductModel() {
-		ProductModelInt productModel = (ProductModelInt) modelCache.get("productModel");
-		if (productModel == null) {
-			if ("Hibernate".equals(DATABASE)) {
-				productModel = new ProductModelHibImp();
-			}
-			if ("JDBC".equals(DATABASE)) {
-				productModel = new ProductModelHibImp();
-			}
-			modelCache.put("productModel", productModel);
-		}
-		return productModel;
-	}
+	
 
 	public MarksheetModelInt getMarksheetModel() {
 		MarksheetModelInt marksheetModel = (MarksheetModelInt) modelCache.get("marksheetModel");

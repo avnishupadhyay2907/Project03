@@ -1,3 +1,4 @@
+<%@page import="java.util.HashMap"%>
 <%@page import="in.co.rays.project_3.controller.StockPurchaseListCtl"%>
 <%@page import="in.co.rays.project_3.util.HTMLUtility"%>
 <%@page import="in.co.rays.project_3.dto.StockPurchaseDTO"%>
@@ -35,6 +36,7 @@
 <body class="p4">
 	<div>
 		<%@include file="Header.jsp"%>
+		<%@include file="calendar.jsp" %>
 	</div>
 	<div>
 		<form action="<%=ORSView.STOCK_PURCHASE_LIST_CTL%>" method="post">
@@ -103,7 +105,7 @@
 
 			<div class="row">
 
-				<div class="col-sm-2"></div>
+				<div class="col-sm-1"></div>
 
 				<div class="col-sm-2">
 					<input class="form-control" type="text" name="quantity"
@@ -117,6 +119,29 @@
 						value="<%=ServletUtility.getParameter("purchasePrice", request)%>">
 				</div>
 &emsp;
+
+	<div class="col-sm-2">
+					<%
+						HashMap map = new HashMap();
+							map.put("High", "High");
+							map.put("Medium", "Medium");
+							map.put("Low", "Low");
+							String htmlList = HTMLUtility.getList("orderType", dto.getOrderType(), map);
+					%>
+					<%=htmlList%>
+					<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("orderType", request)%></font></br>
+				</div>				
+				 &emsp;
+
+<div class="col-sm-2">
+					<input type="text" id="datepicker" name="purchaseDate"
+						placeholder="Enter Purchase Date" class="form-control"
+						value="<%=ServletUtility.getParameter("purchaseDate", request)%>">
+				</div>
+
+				&emsp;
+
+
 				<div class="col-sm-2">
 					<input type="submit" class="btn btn-primary btn-md"
 						style="font-size: 17px" name="operation"
@@ -156,7 +181,7 @@
 							<td align="center"><%=index++%></td>
 							<td align="center"><%=dto.getQuantity()%></td>
 							<td align="center"><%=dto.getPurchasePrice()%></td>
-							<td align="center"><%=dto.getPurchaseDate()%></td>
+							<td align="center"><%=DataUtility.getDateString(dto.getPurchaseDate())%></td>
 							<td align="center"><%=dto.getOrderType()%></td>
 							<td align="center"><a
 								href="StockPurchaseCtl?id=<%=dto.getId()%>">Edit</a></td>
@@ -170,7 +195,7 @@
 			<table width="100%">
 				<tr>
 					<td><input type="submit" name="operation"
-						class="btn btn-secondary btn-md" style="font-size: 17px"
+						class="btn btn-warning btn-md" style="font-size: 17px"
 						value="<%=StockPurchaseListCtl.OP_PREVIOUS%>"
 						<%=pageNo > 1 ? "" : "disabled"%>></td>
 					<td><input type="submit" name="operation"
@@ -181,7 +206,7 @@
 						value="<%=StockPurchaseListCtl.OP_DELETE%>"></td>
 
 					<td align="right"><input type="submit" name="operation"
-						class="btn btn-secondary btn-md" style="font-size: 17px"
+						class="btn btn-warning btn-md" style="font-size: 17px"
 						style="padding: 5px;" value="<%=StockPurchaseListCtl.OP_NEXT%>"
 						<%=(nextPageSize != 0) ? "" : "disabled"%>></td>
 				</tr>
@@ -195,7 +220,7 @@
 					System.out.println("user list view list.size==0");
 			%>
 			<center>
-				<h1 class="text-primary font-weight-bold pt-3">College List</h1>
+				<h1 class="text-primary font-weight-bold pt-3">Stock purchase List</h1>
 			</center>
 			</br>
 			<div class="row">

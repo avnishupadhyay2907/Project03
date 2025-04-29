@@ -46,13 +46,11 @@
 			resource="in/co/rays/project_3/hbm/FacultyDTO.hbm.xml" />
 		<mapping
 			resource="in/co/rays/project_3/hbm/SubjectDTO.hbm.xml" />
-		<mapping
-			resource="in/co/rays/project_3/hbm/ProductDTO.hbm.xml" />
+
 
 		<mapping
 			resource="in/co/rays/project_3/hbm/StockPurchaseDTO.hbm.xml" />
-			
-			<mapping
-			resource="in/co/rays/project_3/hbm/EmployeeDTO.hbm.xml" />
+
+
 	</session-factory>
 </hibernate-configuration>

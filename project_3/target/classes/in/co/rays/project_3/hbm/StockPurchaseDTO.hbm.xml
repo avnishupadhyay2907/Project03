@@ -21,7 +21,7 @@
 			<column name="PURCHASEDATE" />
 		</property>
 		
-		<property name="OrderType" type="java.lang.String">
+		<property name="orderType" type="java.lang.String">
 			<column name="ORDERTYPE" />
 		</property>
 		

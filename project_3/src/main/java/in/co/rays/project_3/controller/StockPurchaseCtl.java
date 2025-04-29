@@ -120,7 +120,7 @@ public class StockPurchaseCtl extends BaseCtl {
 				return;
 			} catch (DuplicateRecordException e) {
 				ServletUtility.setDto(dto, request);
-				ServletUtility.setErrorMessage("StockPurchaseDTO Already Exists", request);
+				ServletUtility.setErrorMessage("Purchase Price Already Exists", request);
 			} 
 		} else if (OP_RESET.equalsIgnoreCase(op)) {
 			ServletUtility.redirect(ORSView.STOCK_PURCHASE_CTL, request, response);

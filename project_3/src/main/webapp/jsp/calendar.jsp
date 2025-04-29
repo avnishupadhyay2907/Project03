@@ -15,7 +15,7 @@
       changeYear: true,
       changeMonth : true,
 		changeYear : true,
-		yearRange : '1970:2007',
+		yearRange : '1970:2025',
 		dateFormat : 'dd/mm/yy',
 		endDate : '-18y',
 			maxDate:0 
@@ -37,7 +37,7 @@
 	  $( "#udate5" ).datepicker({
 		  changeMonth :true,
 		  changeYear :true,
-		  yearRange :'1970:2007',
+		  yearRange :'1970:2025',
 		  dateFormat:'dd/mm/yy',
 
 // Disable for Sunday
@@ -56,7 +56,7 @@
 			changeYear : true,
 			//yearRange: "c-20:c+0",
 			//yearRange : "1980:2025",
-		maxDate:'31/12/2007',
+		maxDate:'29/04/2025',
 		// minDate:0
 		yearRange : "-40:-18"
 		});
